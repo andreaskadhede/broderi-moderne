@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt • Broderi Moderne</title>
+
+
+    <!-- bruges til kortet -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+
+    <!-- bruger til font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=Kite+One&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="img/logo.webp">
+
+    <!-- meta/seo -->
+    <meta name="geo.region" content="DK-82">
+    <meta name="geo.placename" content="Midtjylland">
+    <meta name="geo.position" content="56.223769;10.123814">
+    <meta name="ICBM" content="56.223769, 10.123814">
+    <meta name="author" content="Andrea Skadhede, Karoline Eriksen, Katrine Emilie Klockmann & Silja Hansen">
+    <meta name="description" content="">
+    
+
+</head>
+    <body>
+        <header>
+            <!-- logo i navbar -->
+            <img class="logo" id="logo-nav" src="img/logo.webp" alt="logo">
+
+            <!-- burgerbar start -->
+            <nav>
+
+                <div id="burger-menu">
+                    <span></span>
+                </div>
+                  
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="broderi.html">Broderi</a></li>
+                    <li><a href="haekling.html">Hækling</a></li>
+                    <li><a href="strik.html">Strik</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="monstermaskine.html">Mønstermaskine</a></li>
+                    <img class="logo-menu" src="img/logo.webp" alt="logo">
+                </ul>
+
+            </nav>
+            <!-- burgerbar slut -->
+
+        </header>
+          
+        <!-- main start -->
+        <main class="kontakt">
+            <h1>Kontakt</h1>
+            <!-- kontakt formular -->
+            <form action="kontakt.php" class="kontakt-formular">
+
+                <div class="navn">
+                    <div class="fornavn">
+                        <label for="fornavn">Fornavn *</label>
+                        <input type="text" id="fornavn" name="firstname" placeholder="Dit fornavn" required>
+                    </div>
+
+                    <div class="efternavn">
+                        <label for="efternavn">Efternavn *</label>
+                        <input type="text" id="efternavn" name="lastname" placeholder="Dit efternavn" required>
+                    </div>
+                </div>
+
+                <div class="besked">
+                    <label for="besked">Besked *</label>
+                    <textarea id="besked" name="besked" placeholder="Din besked" required></textarea>
+                </div>
+                <input type="submit" value="Submit">
+            
+            </form>
+
+            <!-- mønster -->
+            <img class="moenster" src="img/moenster/dobbelt-v.webp" alt="Dobbelt v mønster">
+
+            <!-- kort -->
+            <div class="findos">
+                <h3>Find os</h3>
+                <div id="map"></div>
+                <!-- <div id="map1"></div> -->
+            </div>
+
+            <!-- mønster -->
+            <img class="moenster" src="img/moenster/boelge.webp" alt="Bølget mønster">
+
+            <!-- kalender -->
+            <div class="kalender">
+                <h2>Kalender</h2>
+                <p class="tekst">I løbet af afholder vi også workshops i butikken, hvor du kan udfordre dig selv på nye teknikker eller blive beriget med ny inspiration.</p>
+                <h3>Maj 2024</h3>
+                <img src="img/kalender/juni.webp" alt="Juni kalender" class="hidden">
+
+                <div class="kalenderpunkter">
+                    <img class="kalender0" src="img//kalender/maj.webp" alt="Maj kalender">
+
+                    <div class="kalenderpunkt kalender1">
+                        <h4>Workshop</h4>
+                        <p>Sammentræssyning</p>
+                    </div>
+
+                    <div class="kalenderpunkt kalender2">
+                        <h4>Workshop</h4>
+                        <p>Blomsterbroderi og Visible Mending</p>
+                    </div>
+
+                    <div class="kalenderpunkt kalender3">
+                        <h4>Workshop</h4>
+                        <p>Flere frie sting</p>
+                    </div>
+
+                    <div class="kalenderpunkt kalender4">
+                        <h4>Workshop</h4>
+                        <p>Frie sting for absolute beginners</p>
+                    </div>
+
+                    <div class="kalenderpunkt kalender5">
+                        <h4>Workshop</h4>
+                        <p>Flere frie sting</p>
+                    </div>
+
+                    <div class="kalenderpunkt kalender6">
+                        <h4>Workshop</h4>
+                        <p>Sammentræssyning</p>
+                    </div>
+
+                    <div class="kalenderpunkt kalender7">
+                        <h4>Workshop</h4>
+                        <p>Blomsterbroderi og Visible Mending</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- main slut -->
+        
+        <!-- footer start -->
+        <footer>
+            <div class="left">
+                <div class="tider">
+                    <h4>Åbningstider</h4>
+                    <p>Mandag-fredag kl. 11.00 – 17.30</p>
+                    <p>Lørdag kl. 10.00 – 14.00</p>
+                </div>
+                <div class="social">
+                    <p>Sociale medier</p>
+                    <a href="https://www.facebook.com/broderimoderne/?locale=da_DK" target=”_blank”><img src="img/ikoner/facebook.webp" alt=""></a>
+                    <a href="https://www.instagram.com/broderimoderne/?hl=da" target=”_blank”><img src="img/ikoner/instagram.webp" alt=""></a>
+                </div>
+            </div>
+
+            <img src="img/logo.webp" alt="logo">
+
+            <div class="right">
+                <div class="info">
+                    <p><address>Broderi Moderne<br>Nørre Alle 45<br>8000 Århus C</address></p>
+                    <p>CVR: 41442778</p>
+                </div>
+                <div class="social">
+                    <p><a href="mailto:info@broderi-moderne.dk">info@broderi-moderne.dk</a></p>
+                    <p><a href="tel:+4551911244">+45 51 91 12 44</a></p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer slut -->
+
+        <script src="js/burgermenu.js"></script>
+        <script src="js/navbar.js"></script>
+        <script src="js/kort.js"></script>
+
+    </body>
+</html>

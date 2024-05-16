@@ -6,10 +6,476 @@
     box-sizing: border-box;
 }
 
-/************************************************** NAVBAR *************************************************/
+/* Anvender :root til at sætte farverne (dette er smart, så man nemt kan ændre alle af den samme farve på siden) */
+:root {
+    --green: #d2e4bc;
+    --blue: #bbcae7;
+    --red: #ff9fa7;
+    --yellow: #ffe5a9;
+    --beige: #fdf2e0;
+    --brown: #b38c72;
+    --background: #FEFBF5;
+}
+/* For at bruge disse farver skrives det således:
+
+div {
+    background-color:var(--beige);
+}
+Her giver får baggrunden på div'en den fastlagte beige farve.
+*/
+
+
+/* Anvender @font-face for at kunne bruge en bestemt font */
+@font-face {
+    font-family: "futura";
+    src: url("/font/futura.woff2") format("woff2");
+}
+/* For at bruge denne font skrives det således:
+
+div {
+    font-family: 'headerFont';
+}
+*/
+
+body {
+    font-family: "futura";
+    background-color: var(--background);
+    color: var(--brown);
+}
+
+h1 {
+    text-align: center;
+    font-size: 4.25rem;
+    text-transform: uppercase;
+    margin-bottom: 150px;
+    font-weight: 100;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 100;
+
+}
+
+
+
+main {
+    margin: 25px 0 100px;
+}
+/************************************************** HEADER *************************************************/
+
+header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    height: 90%;
+    margin-top: 50px;
+    transition: height 0.3s ease;
+
+}
+
+.logo-menu {
+    width: 150px;
+    margin-top: 65px;
+}
+
+#burger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 45px;
+    right: 50px;
+    z-index: 7;
+    cursor: pointer;
+    height: 35px;
+    width: 45px;
+
+	/* THE LINES */
+	span, span:before, span:after {
+		height: 8px;
+        width: 50px;
+        border-radius: 25px;
+		opacity: 1;
+		transition: 0.3s ease-in-out;
+        position: absolute;
+	}
+
+    span:before,
+	span:after {
+		content: '';
+	}
+
+	/* // TOP */
+	span:before {
+		top: -15px;
+        background: var(--green);
+	}
+
+	/* // MIDDLE */
+	span {
+		top: 13px;
+        background: var(--blue);
+	}
+
+	/* // BOTTOM */
+	span:after {
+		top: 15px;
+        background: var(--red);
+	}
+
+	/* // ROTATION ON CLICK */
+	&.close {
+		/* // TOP */
+		span:before {
+			top: 0px;
+			transform: rotate(90deg);
+            width: 50px;
+		}
+
+		/* // MIDDLE */
+		span {
+			transform: rotate(-45deg);
+            width: 50px;
+		}
+
+		/* // BOTTOM */
+		span:after {
+			top: 0px;
+			transform: rotate(90deg);
+			opacity: 0;
+		}
+	}
+}
+
+#menu {
+    background-color: var(--beige);
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    text-align: center;
+    font-size: 30px;
+    width: 35%;
+    padding: 150px 0 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+
+	&.overlay {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	a {
+        text-decoration: none;
+        color: var(--red);
+	}
+}
+
 
 /************************************************** INDEX **************************************************/
 
+/************************************************* BRODERI *************************************************/
+
+/************************************************* HÆKLING *************************************************/
+
+/************************************************* KONTAKT *************************************************/
+
+.kontakt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: var(--blue);
+}
+
+.kontakt-formular {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    gap: 25px 0;
+    width: 60%;
+}
+
+.navn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    gap: 0 50px;
+
+}
+
+.fornavn, .efternavn, .besked {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+
+#fornavn {
+    background-color: rgba(var(--blue), 0.8);
+    border: var(--blue) 5px solid;
+    border-radius: 25px;
+}
+
+.moenster {
+    transform: rotate(270deg);
+}
+
+.findos {
+    width: 60%;
+}
+
+#map, #map1 {
+    width: 100%;
+    height: 450px;
+}
+
+.kalender {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 85%;
+    text-align: center;
+    align-items: center;
+}
+
+.kalender .tekst {
+    font-size: 2rem;
+    width: 80%;
+    margin: 70px 0 90px;
+    color: var(--brown);
+    font-family: "Krub", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+.kalender h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.kalenderpunkt {
+    font-family: "Give You Glory", cursive;
+    font-weight: 200;
+    font-size: 0.8rem;
+    font-style: normal;
+    width: 75%;
+    padding-top: 5px;
+}
+
+.kalenderpunkt p {
+    color: var(--brown);
+    font-family: "Give You Glory", cursive;
+    font-weight: 200;
+    font-size: 0.8rem;
+    font-style: normal;
+}
+
+.kalender h4 {
+    font-size: 1.25rem;
+    color: var(--brown);
+    line-height: 1.25rem;
+    font-weight: 200;
+}
+
+.kalenderpunkter {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.kalender0 {
+    grid-area: 1 / 1 / 6 / 8;
+    width: 100%;
+    margin-top: -2%;
+}
+
+.kalender1 {
+    grid-area: 1 / 4 / 2 / 5;
+    transform: rotate(340deg);
+}
+
+.kalender1:hover {
+    transform: scale(1.2) rotate(340deg);
+}
+
+.kalender2 {
+    grid-area: 1 / 7 / 2 / 8;
+    transform: rotate(20deg);
+}
+
+.kalender2:hover {
+    transform: scale(1.2) rotate(20deg);
+}
+
+.kalender3 {
+    grid-area: 2 / 3 / 3 / 4;
+    transform: rotate(25deg);
+}
+
+.kalender3:hover {
+    transform: scale(1.2) rotate(25deg);
+}
+
+.kalender4 {
+    grid-area: 3 / 2 / 4 / 3;
+    transform: rotate(345deg);
+}
+
+.kalender4:hover {
+    transform: scale(1.2) rotate(345deg);
+}
+
+.kalender5 {
+    grid-area: 4 / 6 / 5 / 7;
+    transform: rotate(350deg);
+}
+
+.kalender5:hover {
+    transform: scale(1.2) rotate(350deg);
+}
+
+.kalender6 {
+    grid-area: 5 / 2 / 6 / 3;
+    transform: rotate(25deg);
+}
+
+.kalender6:hover {
+    transform: scale(1.2) rotate(25deg);
+}
+
+.kalender7 {
+    grid-area: 5 / 5 / 6 / 6;
+    transform: rotate(350deg);
+}
+
+.kalender7:hover {
+    transform: scale(1.2) rotate(350deg);
+}
+
+
+
+.hidden {
+    display: none;
+}
+/********************************************** MØNSTERMSKAINE *********************************************/
+
+/************************************************** OM OS **************************************************/
+
+/************************************************** STRIK **************************************************/
+
+/*************************************************** TEST **************************************************/
+
 /************************************************** FOOTER *************************************************/
 
+footer {
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    background-color: var(--beige);
+    color: var(--red);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 245px;
+    padding: 40px 80px;
+    z-index: 2;
+}
+
+footer img {
+    width: 175px;
+}
+
+.left {
+    font-size: 15px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    height: 165px;
+    justify-content: center;
+}
+
+address {
+    font-style: normal;
+}
+
+footer h4 {
+    font-size: 16px;
+    font-weight: 800;
+    padding-bottom: -4px;
+}
+
+.social p {
+    padding: 4px 0;
+}
+
+.social a {
+    padding: 4px 0;
+    line-height: 15px;
+}
+
+.social p:hover {
+    color: #FFA4AE;
+}
+
+.social img {
+    height: 45px;
+    width: auto;
+    padding-right: 10px;
+    opacity: 0.8;
+}
+
+.social img:hover {
+    height: 45px;
+    width: auto;
+    padding-right: 10px;
+    opacity: 1;
+}
+
+.right {
+    font-size: 16px;
+    text-align: right;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    height: 165px;
+    justify-content: center;
+}
+
+.right a {
+    text-decoration: none;
+    color: var(--red);
+}
 /************************************************** @MEDIA *************************************************/

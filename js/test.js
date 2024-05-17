@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
         radioButtons.forEach(radio => {
             radio.addEventListener('change', () => {
                 if (index < questions.length - 1) {
-                    questions[index + 1].style.display = 'block';
+                    questions[index + 1].style.display = 'flex';
                 } else {
-                    document.getElementById('se-resultat').style.display = 'block';
+                    document.getElementById('se-resultat').style.display = 'flex';
                 }
             });
         });

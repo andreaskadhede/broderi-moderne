@@ -182,6 +182,7 @@ header {
 	visibility: hidden;
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
 
 	&.overlay {
 		visibility: visible;
@@ -203,7 +204,7 @@ header {
 
 /************************************************* KONTAKT *************************************************/
 
-.kontakt {
+.bla {
     display: flex;
     flex-direction: column;
     justify-content: center;

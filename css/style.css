@@ -15,6 +15,8 @@
     --beige: #fdf2e0;
     --brown: #b38c72;
     --background: #FEFBF5;
+    --redfaded: #FBDADA;
+    --greenfaded: #EFF3E1;
 }
 /* For at bruge disse farver skrives det således:
 
@@ -47,16 +49,15 @@ h1 {
     text-align: center;
     font-size: 4.25rem;
     text-transform: uppercase;
-    margin-bottom: 150px;
+    margin-bottom: 125px;
     font-weight: 100;
 }
 
 h2 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 100;
-
 }
 
 
@@ -396,6 +397,127 @@ header {
 /************************************************** STRIK **************************************************/
 
 /*************************************************** TEST **************************************************/
+
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.test h1 {
+    color: var(--red);
+}
+
+.test h2 {
+    color: var(--red);
+    margin-bottom: 5px;
+}
+
+.test .tekst {
+    font-family: "Krub", sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 60%;
+    margin-bottom: 155px;
+}
+
+.test .tekst p {
+    padding-top: 5px;
+}
+
+.moenster-test {
+    position: absolute;
+    top: 450px;
+    display: flex;
+    flex-direction: column;
+    height: 880px;
+    overflow: hidden;
+}
+
+.moenster-test img {
+    width: 50px;
+    transform: rotate(180deg);
+}
+
+#test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 100px;
+    font-family: "Krub", sans-serif;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
+.omvendt {
+    flex-direction: row-reverse;
+}
+
+.question li {
+    width: 250px;
+    margin-left: 25px;
+    text-wrap: nowrap;
+}
+
+.question p {
+    width: 210px;
+    text-align: center;
+}
+
+.omvendt li {
+    width: 120px;
+    margin-left: 100px;
+    text-wrap: nowrap;
+}
+
+.omvendt p {
+    width: 300px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.custom-radio {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--background);
+    border: 2px solid var(--red); /* Adjust the border color */
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
+
+/* Style for checked state */
+input[type="radio"]:checked + .custom-radio {
+    background-color: var(--red); /* Change this to your desired color */
+}
+
+.button {
+    border: var(--red) solid 5px;
+    color: var(--red);
+    border-radius: 25px;
+    padding: 15px 75px;
+    font-size: 32px;
+    background-color: var(--redfaded);
+}
+
+.se-resultat {
+    margin-top: 100px;
+}
 
 /************************************************** FOOTER *************************************************/
 

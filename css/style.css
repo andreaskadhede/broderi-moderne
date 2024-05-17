@@ -399,7 +399,7 @@ header {
 
 /*************************************************** TEST **************************************************/
 
-.test {
+.rod {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -407,16 +407,16 @@ header {
     height: auto;
 }
 
-.test h1 {
+.rod h1 {
     color: var(--red);
 }
 
-.test h2 {
+.rod h2 {
     color: var(--red);
     margin-bottom: 5px;
 }
 
-.test .tekst {
+.rod .tekst {
     font-family: "Krub", sans-serif;
     font-weight: 100;
     text-align: center;
@@ -425,7 +425,7 @@ header {
     margin-bottom: 155px;
 }
 
-.test .tekst p {
+.rod .tekst p {
     padding-top: 5px;
 }
 

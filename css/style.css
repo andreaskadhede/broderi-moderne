@@ -49,8 +49,9 @@ h1 {
     text-align: center;
     font-size: 4.25rem;
     text-transform: uppercase;
-    margin-bottom: 125px;
+    margin-bottom: 105px;
     font-weight: 100;
+    margin-top: 20px;
 }
 
 h2 {
@@ -85,7 +86,10 @@ header {
     height: 90%;
     margin-top: 50px;
     transition: height 0.3s ease;
+}
 
+.logo img {
+    height: 100%;
 }
 
 .logo-menu {
@@ -311,20 +315,21 @@ header {
 .kalenderpunkter {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     justify-items: center;
     align-items: center;
     cursor: pointer;
+    height: 60vh;
 }
 
 .kalender0 {
-    grid-area: 1 / 1 / 6 / 8;
+    grid-area: 2 / 1 / 7 / 8;
     width: 100%;
-    margin-top: -2%;
+    margin-top: -5%;
 }
 
 .kalender1 {
-    grid-area: 1 / 4 / 2 / 5;
+    grid-area: 2 / 4 / 3 / 5;
     transform: rotate(340deg);
 }
 
@@ -333,7 +338,7 @@ header {
 }
 
 .kalender2 {
-    grid-area: 1 / 7 / 2 / 8;
+    grid-area: 2 / 7 / 3 / 8;
     transform: rotate(20deg);
 }
 
@@ -342,7 +347,7 @@ header {
 }
 
 .kalender3 {
-    grid-area: 2 / 3 / 3 / 4;
+    grid-area: 3 / 3 / 4 / 4;
     transform: rotate(25deg);
 }
 
@@ -351,7 +356,7 @@ header {
 }
 
 .kalender4 {
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 4 / 2 / 5 / 3;
     transform: rotate(345deg);
 }
 
@@ -360,7 +365,7 @@ header {
 }
 
 .kalender5 {
-    grid-area: 4 / 6 / 5 / 7;
+    grid-area: 5 / 6 / 6 / 7;
     transform: rotate(350deg);
 }
 
@@ -369,7 +374,7 @@ header {
 }
 
 .kalender6 {
-    grid-area: 5 / 2 / 6 / 3;
+    grid-area: 6 / 2 / 7 / 3;
     transform: rotate(25deg);
 }
 
@@ -378,7 +383,7 @@ header {
 }
 
 .kalender7 {
-    grid-area: 5 / 5 / 6 / 6;
+    grid-area: 6 / 5 / 7 / 6;
     transform: rotate(350deg);
 }
 
@@ -405,14 +410,11 @@ header {
     justify-content: center;
     align-items: center;
     height: auto;
-}
-
-.rod h1 {
     color: var(--red);
+    overflow: hidden;
 }
 
 .rod h2 {
-    color: var(--red);
     margin-bottom: 5px;
 }
 
@@ -423,6 +425,7 @@ header {
     font-size: 1.5rem;
     width: 60%;
     margin-bottom: 155px;
+    color: var(--brown);
 }
 
 .rod .tekst p {
@@ -434,20 +437,25 @@ header {
     top: 450px;
     display: flex;
     flex-direction: column;
-    height: 880px;
     overflow: hidden;
+    z-index: 0;
 }
 
 .moenster-test img {
     width: 50px;
-    transform: rotate(180deg);
+    margin-right: 25px;
+    transform: scaleX(-1);
+    
 }
 
 #test {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 50px;
+    z-index: 1;
+    margin-bottom: 75px;
 }
 
 .question {
@@ -459,6 +467,7 @@ header {
     font-family: "Krub", sans-serif;
     font-weight: 100;
     font-size: 1.1rem;
+    color: var(--brown);
 }
 
 .omvendt {
@@ -514,11 +523,16 @@ input[type="radio"]:checked + .custom-radio {
     padding: 15px 75px;
     font-size: 32px;
     background-color: var(--redfaded);
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .se-resultat {
     margin-top: 100px;
+    z-index: 3;
 }
+
+
 
 /************************************************** FOOTER *************************************************/
 

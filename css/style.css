@@ -43,11 +43,7 @@ body {
     font-family: "futura";
     background-color: var(--background);
     color: var(--brown);
-    cursor: url('/img/ikoner/cursor.webp'), auto;
-}
-
-a, button, #burger-menu, span {
-    cursor: url('/img/ikoner/cursor.webp'), auto;
+    /* cursor: url('/img/ikoner/cursor.webp'), auto; */
 }
 
 h1 {
@@ -270,12 +266,11 @@ width: 100%;
 .monsterKnap a {
     border: var(--green) solid 5px;
     color: var(--green);
-    border-radius: 25px;
-    padding: 15px 75px;
-    font-size: 32px;
     background-color: var(--greenfaded);
-    text-align: center;
     width: 50%;
+    text-align: center;
+    padding: 1%;
+    margin-top: -5%;
 }
 
 .testKnap {
@@ -297,10 +292,10 @@ width: 100%;
 .testKnap a {
     border: var(--green) solid 5px;
     color: var(--green);
-    border-radius: 25px;
-    padding: 15px 75px;
-    font-size: 32px;
     background-color: var(--greenfaded);
+    width: 50%;
+    text-align: center;
+    padding: 3%;
 }
 
 /************************************************* HÆKLING *************************************************/
@@ -615,7 +610,7 @@ input[type="radio"]:checked + .custom-radio {
     color: var(--red);
     border-radius: 25px;
     padding: 15px 75px;
-    font-size: 32px;
+    font-size: 28px;
     background-color: var(--redfaded);
 }
 

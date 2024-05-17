@@ -199,6 +199,86 @@ header {
 
 /************************************************** INDEX **************************************************/
 
+.forside-body{
+    font-family: "futura";
+    background-color: var(--background);
+    color: var(--brown);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.forside-main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forside-billede {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+.forside-skilter {
+width: 100px;
+height: 100px;
+position: absolute;
+z-index: 10;
+}
+
+.forside-strik{
+background-color: red;
+width: 180%;
+height: 230%;
+position: absolute;
+right: 60%;
+z-index: 10;
+}
+
+
+.forside-haekling {
+background-color: green;
+width: 180%;
+height: 280%;
+position: absolute;
+right: 270%;
+top: 250%;
+z-index: 10;
+}
+
+.forside-broderi {
+background-color: blue;
+width: 180%;
+height: 230%;
+position: absolute;
+left: 55%;
+top: 500%;
+z-index: 10;   
+}
+
+.forside-kontakt {
+background-color: violet;
+width: 180%;
+height: 230%;
+position: absolute;
+right: 45%;
+top: 700%;
+z-index: 10; 
+}
+
+.forside-omos {
+background-color: pink;
+width: 180%;
+height: 230%;
+position: absolute;
+right: 350%;
+top: 700%;
+z-index: 10; 
+}
+
 /************************************************* BRODERI *************************************************/
 .gron {
     display: flex;

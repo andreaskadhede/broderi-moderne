@@ -198,6 +198,102 @@ header {
 /************************************************** INDEX **************************************************/
 
 /************************************************* BRODERI *************************************************/
+.gron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.gron h1 {
+    color: var(--green);
+}
+
+.gron h2 {
+    color: var(--green);
+    margin-bottom: 5px;
+}
+
+.gron .tekst {
+    font-family: "Krub", sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 60%;
+    margin-bottom: 155px;
+}
+
+.gron .tekst p {
+    padding-top: 5px;
+}
+
+.infographic {
+width: 100%;
+}
+
+.ligeStreg {
+    transform: rotate(90deg);
+    width: 5.5%;
+    margin-top: -40%;
+}
+
+.knapTekst {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.monsterKnap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.monsterKnap p {
+    font-family: "Krub", sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 60%;
+    margin-bottom: 155px;
+}
+
+.monsterKnap a {
+    border: var(--green) solid 5px;
+    color: var(--green);
+    border-radius: 25px;
+    padding: 15px 75px;
+    font-size: 32px;
+    background-color: var(--greenfaded);
+    text-align: center;
+}
+
+.testKnap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.testKnap p {
+    font-family: "Krub", sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 60%;
+    margin-bottom: 155px;
+}
+
+.testKnap a {
+    border: var(--green) solid 5px;
+    color: var(--green);
+    border-radius: 25px;
+    padding: 15px 75px;
+    font-size: 32px;
+    background-color: var(--greenfaded);
+}
 
 /************************************************* HÆKLING *************************************************/
 

@@ -43,6 +43,11 @@ body {
     font-family: "futura";
     background-color: var(--background);
     color: var(--brown);
+    cursor: url('/img/ikoner/cursor.webp'), auto;
+}
+
+a, button, #burger-menu, span {
+    cursor: url('/img/ikoner/cursor.webp'), auto;
 }
 
 h1 {
@@ -236,13 +241,14 @@ width: 100%;
 .ligeStreg {
     transform: rotate(90deg);
     width: 5.5%;
-    margin-top: -40%;
+    margin-top: -30%;
 }
 
 .knapTekst {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: -30%;
 }
 
 .monsterKnap {
@@ -269,6 +275,7 @@ width: 100%;
     font-size: 32px;
     background-color: var(--greenfaded);
     text-align: center;
+    width: 50%;
 }
 
 .testKnap {

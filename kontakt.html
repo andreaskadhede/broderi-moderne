@@ -33,7 +33,7 @@
     <body>
         <header>
             <!-- logo i navbar -->
-            <img class="logo" id="logo-nav" src="img/logo.webp" alt="logo">
+            <a href="index.html" class="logo"><img id="logo-nav" src="img/logo.webp" alt="logo"></a>
 
             <!-- burgerbar start -->
             <nav>
@@ -41,7 +41,7 @@
                 <div id="burger-menu">
                     <span></span>
                 </div>
-                  
+
                 <ul class="menu" id="menu">
                     <li><a href="index.html">Forside</a></li>
                     <li><a href="broderi.html">Broderi</a></li>
@@ -52,10 +52,9 @@
                     <li><a href="monstermaskine.html">Mønstermaskine</a></li>
                     <img class="logo-menu" src="img/logo.webp" alt="logo">
                 </ul>
-
+                
             </nav>
             <!-- burgerbar slut -->
-
         </header>
           
         <!-- main start -->
@@ -66,26 +65,26 @@
 
                 <div class="navn">
                     <div class="fornavn">
-                        <label for="fornavn">Fornavn *</label>
-                        <input type="text" id="fornavn" name="firstname" placeholder="Dit fornavn" required>
+                        <label for="fornavn">Fornavn*</label>
+                        <input type="text" id="fornavn" name="firstname" required>
                     </div>
 
                     <div class="efternavn">
-                        <label for="efternavn">Efternavn *</label>
-                        <input type="text" id="efternavn" name="lastname" placeholder="Dit efternavn" required>
+                        <label for="efternavn">Efternavn*</label>
+                        <input type="text" id="efternavn" name="lastname" required>
                     </div>
                 </div>
 
                 <div class="besked">
-                    <label for="besked">Besked *</label>
-                    <textarea id="besked" name="besked" placeholder="Din besked" required></textarea>
+                    <label for="besked">Besked*</label>
+                    <textarea id="besked" name="besked" required></textarea>
                 </div>
-                <input type="submit" value="Submit">
+                <button class="button" id="indsend" type="submit" value="Submit">Indsend</button>
             
             </form>
 
             <!-- mønster -->
-            <img class="moenster" src="img/moenster/dobbelt-v.webp" alt="Dobbelt v mønster">
+            <div class="dobbelt-v"></div>
 
             <!-- kort -->
             <div class="findos">
@@ -95,17 +94,19 @@
             </div>
 
             <!-- mønster -->
-            <img class="moenster" src="img/moenster/boelge.webp" alt="Bølget mønster">
+            <div class="boelge"></div>
 
             <!-- kalender -->
             <div class="kalender">
                 <h1>Kalender</h1>
-                <p class="tekst">I løbet af afholder vi også workshops i butikken, hvor du kan udfordre dig selv på nye teknikker eller blive beriget med ny inspiration.</p>
+                <p class="tekst">I løbet af måneden afholder vi også workshops i butikken, hvor du kan udfordre dig selv på nye teknikker eller blive beriget med ny inspiration.</p>
                 <h3>Maj 2024</h3>
                 <img src="img/kalender/juni.webp" alt="Juni kalender" class="hidden">
 
+
                 <div class="kalenderpunkter">
-                    <img class="kalender0" src="img//kalender/maj.webp" alt="Maj kalender">
+                    <img class="kalender0" src="img/kalender/maj.webp" alt="Maj kalender">
+
 
                     <div class="kalenderpunkt kalender1">
                         <h4>Workshop</h4>

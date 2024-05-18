@@ -28,15 +28,15 @@
     <body>
         <header>
             <!-- logo i navbar -->
-            <img class="logo" id="logo-nav" src="img/logo.webp" alt="logo">
+            <a href="index.html" class="logo"><img id="logo-nav" src="img/logo.webp" alt="logo"></a>
 
             <!-- burgerbar start -->
             <nav>
 
                 <div id="burger-menu">
                     <span></span>
-                  </div>
-                  
+                </div>
+
                 <ul class="menu" id="menu">
                     <li><a href="index.html">Forside</a></li>
                     <li><a href="broderi.html">Broderi</a></li>
@@ -47,15 +47,42 @@
                     <li><a href="monstermaskine.html">Mønstermaskine</a></li>
                     <img class="logo-menu" src="img/logo.webp" alt="logo">
                 </ul>
-
+                
             </nav>
             <!-- burgerbar slut -->
-
         </header>
           
         <!-- main start -->
-        <main>
+        <main class="rod">
             <h1>Mønstermaskine</h1>
+            <h2>Velkommen til mønstermaskinen</h2>
+            <div class="monster-tekst">
+                <p>Er du i tvivl om hvad dit næste projekt skal være?</p>
+                <p>Og er der ikke lige nogen opskrift som passer til dine ønsker?</p>
+                <br>
+                <p>Så har du fundet det helt rigtige sted. Vælg de farver du vil bruge og gå i gang med at kreere dit helt eget mønster!</p>
+            </div>
+
+            <a class="button" id="monster-button" href="#dobbelt-v">Design mønster</a>
+
+            <div id="dobbelt-v" class="dobbelt-v"></div>
+
+            <h2>Farver</h2>
+            <p class="monster-tekst1">Vælg de farver du vil bruge til dit mønster!</p>
+
+
+            <!-- <input type="number" id="rows" placeholder="Rows">
+            <input type="number" id="columns" placeholder="Columns">
+            <button id="apply-grid-size">Apply</button> -->
+
+            <div id="controls">
+                <div id="color-buttons"></div>
+            </div>
+            <div id="pattern-container"></div>
+
+            <a id="clear-button">Ryd felter</a>
+            <button class="button" id="export-button">Eskporter</button>
+            <textarea id="export-output" readonly></textarea>
 
         </main>
         <!-- main slut -->
@@ -70,8 +97,8 @@
                 </div>
                 <div class="social">
                     <p>Sociale medier</p>
-                    <p>Facebook</p>
-                    <p>Instagram</p>
+                    <a href="https://www.facebook.com/broderimoderne/?locale=da_DK" target=”_blank”><img src="img/ikoner/facebook.webp" alt=""></a>
+                    <a href="https://www.instagram.com/broderimoderne/?hl=da" target=”_blank”><img src="img/ikoner/instagram.webp" alt=""></a>
                 </div>
             </div>
 
@@ -87,9 +114,13 @@
                     <p><a href="tel:+4551911244">+45 51 91 12 44</a></p>
                 </div>
             </div>
-        </footer>        <!-- footer slut -->
+        </footer>
+        <!-- footer slut -->
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
         <script src="js/burgermenu.js"></script>
         <script src="js/navbar.js"></script>
+        <script src="js/maskine.js"></script>
     </body>
 </html>

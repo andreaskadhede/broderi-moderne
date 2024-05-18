@@ -2,9 +2,5 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-
+   
 });
-
-
-
-  

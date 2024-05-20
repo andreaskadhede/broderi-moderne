@@ -105,7 +105,7 @@ main {
     background-size: cover;
     width: 100vw;
     background-size: auto 100%;
-    margin: 50px 0 80px;
+    margin: 55px 0 80px;
 }
 
 /************************************************** HEADER *************************************************/
@@ -775,19 +775,13 @@ z-index: 10;
     width: 80vw;
 }
 
-
-.lene-billede{
-    width: 30%;
-    margin-left: 60%;
-}
-
-.lene{
+.lene, .dorthe{
     font-size: 180%;
     font-weight: 100;
     text-transform: uppercase;
 }
 
-.lene img {
+.lene img, .dorthe img {
     width: 30%;
     margin-left: 60%;
 }
@@ -1264,23 +1258,28 @@ footer h4 {
         margin-bottom: 50px;
     }
     
-    .infographic img {
-        width: 100%;
-    }
-    
     .knapTekst {
         gap: 50px;
+        flex-direction: column;
+        align-items: center;
     }
     
     .monsterKnap, .testKnap {
         width: 80%;
     }
     
-    .monsterKnap p, .testKnap p {
+    .monsterKnap p {
         font-size: 1rem;
         width: 80%;
         margin-bottom: 20px;
-        height: 70px;
+        height: 60px;
+    }
+
+    .testKnap p {
+        font-size: 1rem;
+        width: 80%;
+        margin-bottom: 20px;
+        height: 40px;
     }
     
     .monsterKnap a {

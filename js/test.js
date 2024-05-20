@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const questions = document.querySelectorAll('.question');
-    const img = document.querySelectorAll('.boelgetest');
+    const imgLaptop = document.querySelectorAll('.boelgetest-laptop');
+    const imgMobil = document.querySelectorAll('.boelgetest-mobil');
     const resultButton = document.getElementById('se-resultat');
     const boelgeFuld = document.getElementById('boelgefuld');
-
 
     // Ensure the first question is visible on page load
     questions[0].style.display = 'flex';
@@ -47,16 +47,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const radioButtons = question.querySelectorAll('input[type="radio"]');
         radioButtons.forEach(radio => {
             radio.addEventListener('change', () => {
-                // Hide all subsequent questions
+                // Hide all subsequent questions and images
                 for (let i = index + 1; i < questions.length; i++) {
                     questions[i].style.display = 'none';
-                    img[i].style.display = 'none';
+                    imgLaptop[i].style.display = 'none';
+                    imgMobil[i].style.display = 'none';
                 }
 
                 // Show the next question or result button
                 if (index < questions.length - 1) {
                     questions[index + 1].style.display = 'flex';
-                    img[index + 1].style.display = 'flex';
+                    if (window.innerWidth >= 820) {
+                        imgLaptop[index + 1].style.display = 'flex';
+                    } else {
+                        imgMobil[index + 1].style.display = 'flex';
+                    }
                 } else {
                     document.getElementById('se-resultat').style.display = 'flex';
                     resultButton.style.display = 'block';
@@ -65,5 +70,31 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Listen for window resize to adjust images accordingly
+    window.addEventListener('resize', () => {
+        const currentIndex = Array.from(questions).findIndex(question => question.style.display === 'flex');
+        if (currentIndex !== -1) {
+            if (window.innerWidth >= 820) {
+                imgLaptop[currentIndex].style.display = 'flex';
+                imgMobil[currentIndex].style.display = 'none';
+            } else {
+                imgLaptop[currentIndex].style.display = 'none';
+                imgMobil[currentIndex].style.display = 'flex';
+            }
+        }
+    });
+
+    // Initial adjustment on page load
+    const currentIndex = Array.from(questions).findIndex(question => question.style.display === 'flex');
+    if (currentIndex !== -1) {
+        if (window.innerWidth >= 820) {
+            imgLaptop[currentIndex].style.display = 'flex';
+            imgMobil[currentIndex].style.display = 'none';
+        } else {
+            imgLaptop[currentIndex].style.display = 'none';
+            imgMobil[currentIndex].style.display = 'flex';
+        }
+    }
 
 });

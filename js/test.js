@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const questions = document.querySelectorAll('.question');
-    const img = document.querySelectorAll('.boelge');
+    const img = document.querySelectorAll('.boelgetest');
     const resultButton = document.getElementById('se-resultat');
     const boelgeFuld = document.getElementById('boelgefuld');
 
@@ -52,24 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     questions[i].style.display = 'none';
                     img[i].style.display = 'none';
                 }
-                // for (let i = index + 1; i < img.length; i++) {
-                    // img[i].style.display = 'none';
-                // }
 
                 // Show the next question or result button
                 if (index < questions.length - 1) {
                     questions[index + 1].style.display = 'flex';
                     img[index + 1].style.display = 'flex';
                 } else {
+                    document.getElementById('se-resultat').style.display = 'flex';
                     resultButton.style.display = 'block';
                     boelgeFuld.style.display = 'block';
                 }
-
-                // if (index < img.length - 1) {
-                //     img[index + 1].style.display = 'flex';
-                // } else {
-                //     boelgeFuld.style.display = 'block';
-                // }
             });
         });
     });

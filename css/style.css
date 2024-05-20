@@ -285,7 +285,7 @@ top: 700%;
 z-index: 10; 
 }
 
-/************************************************* BRODERI *************************************************/
+/****************************************** BRODERI/HÆKLING/STRIK ********************************************/
 .gron {
     display: flex;
     flex-direction: column;
@@ -336,58 +336,43 @@ z-index: 10;
     justify-content: center;
 }
 
-.monsterKnap {
+.monsterKnap, .testKnap {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
 }
 
-.monsterKnap p {
+.monsterKnap p, .testKnap p {
     font-family: "Krub", sans-serif;
     font-weight: 100;
     text-align: center;
     font-size: 1.5rem;
     width: 80%;
-    margin-bottom: 155px;
+    margin-bottom: 100px;
+    height: 100px;
 }
 
 .monsterKnap a {
     border: var(--green) solid 5px;
     color: var(--green);
     background-color: var(--greenfaded);
-    width: 65%;
+    width: 350px;
+    height: 95px;
     text-align: center;
-    padding: 1%;
-    margin-top: -5%;
-}
-
-.testKnap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-}
-
-.testKnap p {
-    font-family: "Krub", sans-serif;
-    font-weight: 100;
-    text-align: center;
-    font-size: 1.5rem;
-    width: 70%;
-    margin-bottom: 155px;
+    padding: 5px;
 }
 
 .testKnap a {
     border: var(--green) solid 5px;
     color: var(--green);
     background-color: var(--greenfaded);
-    width: 60%;
+    width: 350px;
+    height: 95px;
     text-align: center;
-    padding: 4.5%;
+    padding: 5px;
+    line-height: 80px;
 }
-
-/************************************************* HÆKLING *************************************************/
 
 /************************************************* KONTAKT *************************************************/
 
@@ -482,7 +467,7 @@ z-index: 10;
     background-size: cover;
     width: 100vw;
     background-size: auto 100%;
-    margin: 150px 0 100px;
+    margin: 130px 0 100px;
 }
 
 .kalender {
@@ -789,7 +774,31 @@ z-index: 10;
     margin-left: 60%;
 }
 
-/************************************************** STRIK **************************************************/
+/************************************************* RESULTAT ************************************************/
+.rod .p {
+    font-family: "Krub", sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 60%;
+    margin-bottom: 50px;
+    color: var(--brown);
+}
+
+.cirkel {
+    border-radius: 50%;
+    height: 30rem;
+    width: 30rem;
+    background-color: var(--beige);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.cirkel img {
+    width: 60%;
+}
 
 /*************************************************** TEST **************************************************/
 

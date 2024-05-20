@@ -361,14 +361,10 @@ z-index: 10;
     text-align: center;
     font-size: 1.5rem;
     width: 60%;
-    margin-bottom: 155px;
+    margin-bottom: 115px;
 }
 
-.gron .tekst p {
-    padding-top: 5px;
-}
-
-.infographic {
+.infographic img {
     width: 100%;
 }
 
@@ -1205,7 +1201,7 @@ footer h4 {
         background-size: cover;
         width: 100vw;
         background-size: auto 100%;
-        margin: 150px 0 100px;
+        margin: 50px 0 50px;
     }
     
     .v {
@@ -1261,6 +1257,44 @@ footer h4 {
     /************************************************** INDEX **************************************************/
 
     /****************************************** BRODERI/HÆKLING/STRIK ******************************************/
+    
+    .gron .tekst {
+        font-size: 1rem;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    
+    .infographic img {
+        width: 100%;
+    }
+    
+    .knapTekst {
+        gap: 50px;
+    }
+    
+    .monsterKnap, .testKnap {
+        width: 80%;
+    }
+    
+    .monsterKnap p, .testKnap p {
+        font-size: 1rem;
+        width: 80%;
+        margin-bottom: 20px;
+        height: 70px;
+    }
+    
+    .monsterKnap a {
+        border: var(--green) solid 2px;
+        width: 150px;
+        height: 45px;
+    }
+    
+    .testKnap a {
+        border: var(--green) solid 2px;
+        width: 150px;
+        height: 45px;
+        line-height: 32px;
+    }
 
     /************************************************* KONTAKT *************************************************/
     

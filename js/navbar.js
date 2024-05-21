@@ -1,25 +1,47 @@
 "use strict"
 
 document.addEventListener('DOMContentLoaded', function() {
+  function checkScreenWidth() {
+    if (window.matchMedia("(min-width: 820px)").matches) {
+      window.addEventListener('scroll', handleScrollLaptop);
+      window.removeEventListener('scroll', handleScrollMobile);
+    } else if (window.matchMedia("(max-width: 821px)").matches) {
+      window.addEventListener('scroll', handleScrollMobile);
+      window.removeEventListener('scroll', handleScrollLaptop);
+    }
+  }
 
-  window.addEventListener('scroll', function() {
+  // Function to handle scroll event for laptop
+  function handleScrollLaptop() {
     const nav = document.querySelector("header");
     const logo = document.getElementById("logo-nav");
-    let threshold = 60;
-  
+    let threshold = 80;
+
     if (window.pageYOffset > threshold) {
       nav.style.backgroundColor = "#fdf2e0";
-      logo.style.height = "60%"
-      logo.style.marginTop = "0"
+      logo.style.height = "65px";
     } else {
       nav.style.backgroundColor = 'transparent';
-      logo.style.height = "90%"
-      logo.style.marginTop = "50px"
+      logo.style.height = "100px";
     }
-  });
-  
+  }
+
+  // Function to handle scroll event for mobile
+  function handleScrollMobile() {
+    const nav = document.querySelector("header");
+    const logo = document.getElementById("logo-nav");
+    let threshold = 40;
+
+    if (window.pageYOffset > threshold) {
+      nav.style.backgroundColor = "#fdf2e0";
+    } else {
+      nav.style.backgroundColor = 'transparent';
+    }
+  }
+
+  // Initial check
+  checkScreenWidth();
+
+  // Recheck when window is resized
+  window.addEventListener('resize', checkScreenWidth);
 });
-
-
-
-  

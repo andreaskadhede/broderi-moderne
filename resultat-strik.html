@@ -21,22 +21,22 @@
     <meta name="geo.position" content="56.223769;10.123814">
     <meta name="ICBM" content="56.223769, 10.123814">
     <meta name="author" content="Andrea Skadhede, Karoline Eriksen, Katrine Emilie Klockmann & Silja Hansen">
-    <meta name="description" content="">
+    <meta name="description" content="Her er resultatet af din inspirationstest. Held og lykke med projektet!">
     
 
 </head>
     <body>
         <header>
             <!-- logo i navbar -->
-            <img class="logo" id="logo-nav" src="img/logo.webp" alt="logo">
+            <a href="index.html" class="logo"><img id="logo-nav" src="img/logo.webp" alt="logo"></a>
 
             <!-- burgerbar start -->
             <nav>
 
                 <div id="burger-menu">
                     <span></span>
-                  </div>
-                  
+                </div>
+
                 <ul class="menu" id="menu">
                     <li><a href="index.html">Forside</a></li>
                     <li><a href="broderi.html">Broderi</a></li>
@@ -47,15 +47,29 @@
                     <li><a href="monstermaskine.html">Mønstermaskine</a></li>
                     <img class="logo-menu" src="img/logo.webp" alt="logo">
                 </ul>
-
+                
             </nav>
             <!-- burgerbar slut -->
-
         </header>
           
         <!-- main start -->
-        <main>
+        <main class="rod">
             <h1>Resultat</h1>
+            
+            <p class="p">Ud fra dine svar har vi fundet et kit som passer til dine behov.</p>
+            
+            <div class="cirkel">
+                <img src="img/kits/kit-strik.webp" alt="Strikke kit">
+            </div>
+
+            <p class="p">Strikke kittet Uld Strømper er perfekt til en der er ny til at strikke og indeholder alt det du skal bruge for at komme sikkert igennem dit første projekt.</p>
+            
+            <h2>God fornøjelse!</h2>
+
+            <div class="boelge"></div>
+
+            <img class="kit" src="img/kits/strikke-kit-indhold.webp" alt="Indhold af strikke kit">
+
 
         </main>
         <!-- main slut -->
@@ -70,8 +84,8 @@
                 </div>
                 <div class="social">
                     <p>Sociale medier</p>
-                    <p>Facebook</p>
-                    <p>Instagram</p>
+                    <a href="https://www.facebook.com/broderimoderne/?locale=da_DK" target=”_blank”><img src="img/ikoner/facebook.webp" alt=""></a>
+                    <a href="https://www.instagram.com/broderimoderne/?hl=da" target=”_blank”><img src="img/ikoner/instagram.webp" alt=""></a>
                 </div>
             </div>
 
@@ -87,7 +101,29 @@
                     <p><a href="tel:+4551911244">+45 51 91 12 44</a></p>
                 </div>
             </div>
-        </footer>        <!-- footer slut -->
+
+            <div class="tider-m">
+                <h4>Åbningstider</h4>
+                <p>Mandag-fredag<br>kl. 11.00 – 17.30</p>
+                <p>Lørdag<br>kl. 10.00 – 14.00</p>
+            </div>
+            <div class="social-m">
+                <p>Sociale medier</p>
+                <a href="https://www.facebook.com/broderimoderne/?locale=da_DK" target=”_blank”><img src="img/ikoner/facebook.webp" alt=""></a>
+                <a href="https://www.instagram.com/broderimoderne/?hl=da" target=”_blank”><img src="img/ikoner/instagram.webp" alt=""></a>
+            </div>
+
+            <div class="info-m">
+                <h4>Adresse</h4>
+                <p><address>Broderi Moderne<br>Nørre Alle 45</address></p>
+                <p>8000 Århus C<br>CVR: 41442778</p>
+            </div>
+            <div class="kontakt-footer-m">
+                <p><a href="mailto:info@broderi-moderne.dk">info@broderi-moderne.dk</a></p>
+                <p><a href="tel:+4551911244">+45 51 91 12 44</a></p>
+            </div>
+        </footer>
+        <!-- footer slut -->
 
         <script src="js/burgermenu.js"></script>
         <script src="js/navbar.js"></script>

@@ -263,26 +263,20 @@ header {
 }
 
 .forside-billede {
-    min-height: 100%;
-    width: 100%;
+    height: auto;
+    width: 100vw;
     display: block;
     position: absolute;
     top: 0;
+    right: 0;
 }
 
 .forside-billede img {
     width: 100%;
 }
 
-.kalender0 {
-    grid-area: 1 / 1 / 6 / 8;
-}
 
-.kalender0 img{
-    width: 85vw;
-    margin-top: -3%;
-}
-
+/*laptop skilter*/
 .forside-skilter {
 width: 100px;
 height: 100px;
@@ -290,13 +284,15 @@ position: absolute;
 z-index: 10;
 }
 
+
+
 .forside-strik{
 background-color: red;
 opacity: 80%;
-width: 180%;
-height: 230%;
+width: 60vw;
+height: 27vh;
 position: absolute;
-right: 60%;
+right: -2vw;
 z-index: 10;
 }
 
@@ -304,46 +300,50 @@ z-index: 10;
 .forside-haekling {
 background-color: green;
 opacity: 80%;
-width: 180%;
-height: 280%;
+width: 50vw;
+height: 31vh;
 position: absolute;
-right: 270%;
-top: 250%;
+right: 20vh;
+top: 28vh;
 z-index: 10;
 }
 
 .forside-broderi {
 background-color: blue;
 opacity: 80%;
-width: 180%;
-height: 230%;
+width: 100vw;
+height: 20vh;
 position: absolute;
-left: 55%;
-top: 500%;
+right: -10vw;
+top: 60vh;
 z-index: 10;   
 }
 
 .forside-kontakt {
-background-color: violet;
-opacity: 80%;
-width: 180%;
-height: 230%;
-position: absolute;
-right: 45%;
-top: 700%;
-z-index: 10; 
+    background-color: pink;
+    opacity: 80%;
+    width: 30vw;
+    height: 25vh;
+    position: absolute;
+    right: -12vw;
+    top: 80vh;
+    z-index: 10; 
 }
 
 .forside-omos {
-background-color: pink;
-opacity: 80%;
-width: 180%;
-height: 230%;
-position: absolute;
-right: 350%;
-top: 700%;
-z-index: 10; 
+    background-color: violet;
+    opacity: 80%;
+    width: 40vw;
+    height: 25vh;
+    position: absolute;
+    right: 20vw;
+    top: 80vh;
+    z-index: 10;  
 }
+
+
+
+
 
 /****************************************** BRODERI/HÆKLING/STRIK ********************************************/
 .gron {
@@ -867,10 +867,6 @@ q{
     width: 60%;
 }
 
-.kit img {
-    width: 100%;
-}
-
 /*************************************************** TEST **************************************************/
 
 .rod {
@@ -1304,6 +1300,91 @@ footer h4 {
     }
 
     /************************************************** INDEX **************************************************/
+
+
+    .forside-billede {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .forside-billede img {
+        width: 100%;
+    }
+
+    .forside-skilter{
+        display: none;
+    }
+
+    /*mobil skilter*/
+
+.forside-skilter-mobil {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 10;
+    }
+    
+    
+    
+    .forside-strik-mobil {
+    background-color: red;
+    opacity: 80%;
+    width: 45vw;
+    height: 10vh;
+    position: absolute;
+    top: 30vh;
+    left: 2vw;
+    z-index: 10;
+    }
+    
+    
+    .forside-haekling-mobil {
+    background-color: green;
+    opacity: 80%;
+    width: 50vw;
+    height: 10vh;
+    position: absolute;
+    right: 10vh;
+    top: 60vh;
+    z-index: 10;
+    }
+    
+    .forside-broderi-mobil {
+    background-color: blue;
+    opacity: 80%;
+    width: 50vw;
+    height: 10vh;
+    position: absolute;
+    left: 12vw;
+    top: 73vh;
+    z-index: 10;   
+    }
+    
+    .forside-kontakt-mobil {
+    background-color: violet;
+    opacity: 80%;
+    width: 40vw;
+    height: 10vh;
+    position: absolute;
+    left: 12vw;
+    top: 89vh;
+    z-index: 10; 
+    }
+    
+    .forside-omos-mobil {
+    background-color: pink;
+    opacity: 80%;
+    width: 40vw;
+    height: 10vh;
+    position: absolute;
+    right: 25vw;
+    top: 89vh;
+    z-index: 10;  
+    }
 
     /****************************************** BRODERI/HÆKLING/STRIK ******************************************/
     

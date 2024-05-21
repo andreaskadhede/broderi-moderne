@@ -2,7 +2,13 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    const questions = document.querySelectorAll('.question');
+    const imgLaptop = document.querySelectorAll('.boelgetest-laptop');
+    const imgMobil = document.querySelectorAll('.boelgetest-mobil');
+    const resultButton = document.getElementById('se-resultat');
+    const boelgeFuld = document.getElementById('boelgefuld');
     const resultat = document.getElementById("se-resultat");
+
     resultat.addEventListener("click", seResultat)
 
     function seResultat() {
@@ -27,18 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             window.location.href = '';
         }
-
-
-        // /resultat-broderi.html
-        // /resultat-strik.html
-        // /resultat-haekling.html
     }
-
-    const questions = document.querySelectorAll('.question');
-    const imgLaptop = document.querySelectorAll('.boelgetest-laptop');
-    const imgMobil = document.querySelectorAll('.boelgetest-mobil');
-    const resultButton = document.getElementById('se-resultat');
-    const boelgeFuld = document.getElementById('boelgefuld');
 
     // Ensure the first question is visible on page load
     questions[0].style.display = 'flex';

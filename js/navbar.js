@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Function to handle scroll event for laptop
+  // Function til farven på navigationsbar ved scrool på laptop
   function handleScrollLaptop() {
     const nav = document.querySelector("header");
     const logo = document.getElementById("logo-nav");
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Function to handle scroll event for mobile
+  // Function til farven på navigationsbar ved scrool på mobil
   function handleScrollMobile() {
     const nav = document.querySelector("header");
     const logo = document.getElementById("logo-nav");

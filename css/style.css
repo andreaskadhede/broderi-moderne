@@ -263,6 +263,9 @@ header {
 }
 
 .forside-billede {
+    min-height: 100%;
+    width: 100%;
+    display: block;
     position: absolute;
     top: 0;
 }
@@ -289,6 +292,7 @@ z-index: 10;
 
 .forside-strik{
 background-color: red;
+opacity: 80%;
 width: 180%;
 height: 230%;
 position: absolute;
@@ -299,6 +303,7 @@ z-index: 10;
 
 .forside-haekling {
 background-color: green;
+opacity: 80%;
 width: 180%;
 height: 280%;
 position: absolute;
@@ -309,6 +314,7 @@ z-index: 10;
 
 .forside-broderi {
 background-color: blue;
+opacity: 80%;
 width: 180%;
 height: 230%;
 position: absolute;
@@ -319,6 +325,7 @@ z-index: 10;
 
 .forside-kontakt {
 background-color: violet;
+opacity: 80%;
 width: 180%;
 height: 230%;
 position: absolute;
@@ -329,6 +336,7 @@ z-index: 10;
 
 .forside-omos {
 background-color: pink;
+opacity: 80%;
 width: 180%;
 height: 230%;
 position: absolute;

@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const pdfWidth = pdf.internal.pageSize.getWidth();
         const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
         pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-        pdf.save('pattern.pdf');
+        pdf.save('mønster.pdf');
     }
 
     // Eventlistener til "ryd felter"-knappen

@@ -64,11 +64,50 @@ h2 {
     font-weight: 100;
 }
 
-
-
 main {
     margin: 25px 0 100px;
 }
+
+.boelge {
+    height: 60px;
+    flex-direction: row;
+    background-image: url('/img/moenster/boelge.webp');
+    background-size: cover;
+    width: 100vw;
+    background-size: auto 100%;
+    margin: 130px 0 100px;
+}
+
+.dobbelt-v {
+    height: 80px;
+    flex-direction: row;
+    background-image: url('/img/moenster/dobbelt-v.webp');
+    background-size: cover;
+    width: 100vw;
+    background-size: auto 100%;
+    margin: 150px 0 100px;
+}
+
+.streg {
+    height: 50px;
+    flex-direction: row;
+    background-image: url('/img/moenster/streg.webp');
+    background-size: cover;
+    width: 100vw;
+    background-size: auto 100%;
+    margin: 150px 0 100px;
+}
+
+.v {
+    height: 60px;
+    flex-direction: row;
+    background-image: url('/img/moenster/v.webp');
+    background-size: cover;
+    width: 100vw;
+    background-size: auto 100%;
+    margin: 55px 0 80px;
+}
+
 /************************************************** HEADER *************************************************/
 
 header {
@@ -92,12 +131,14 @@ header {
 }
 
 .logo img {
-    height: 100%;
+    height: 100px;
+    transition: height 0.3s ease;
+
 }
 
 .logo-menu {
     width: 150px;
-    margin-top: 65px;
+    margin-top: 50px;
 }
 
 #burger-menu {
@@ -180,10 +221,10 @@ header {
     z-index: 5;
     text-align: center;
     font-size: 30px;
-    width: 35%;
+    width: 40%;
     padding: 150px 0 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
 	visibility: hidden;
@@ -222,10 +263,25 @@ header {
 }
 
 .forside-billede {
-    width: 100%;
+    height: 100%;
+    
     display: block;
     position: absolute;
     top: 0;
+    right: 0;
+}
+
+.forside-billede img {
+    height: 120%;
+}
+
+.kalender0 {
+    grid-area: 1 / 1 / 6 / 8;
+}
+
+.kalender0 img{
+    width: 85vw;
+    margin-top: -3%;
 }
 
 .forside-skilter {
@@ -235,53 +291,60 @@ position: absolute;
 z-index: 10;
 }
 
+
+
 .forside-strik{
 background-color: red;
-width: 180%;
-height: 230%;
+opacity: 80%;
+width: 60vw;
+height: 27vh;
 position: absolute;
-right: 60%;
+right: -2vw;
 z-index: 10;
 }
 
 
 .forside-haekling {
 background-color: green;
-width: 180%;
-height: 280%;
+opacity: 80%;
+width: 50vw;
+height: 31vh;
 position: absolute;
-right: 270%;
-top: 250%;
+right: 20vh;
+top: 28vh;
 z-index: 10;
 }
 
 .forside-broderi {
 background-color: blue;
-width: 180%;
-height: 230%;
+opacity: 80%;
+width: 100vw;
+height: 20vh;
 position: absolute;
-left: 55%;
-top: 500%;
+right: -10vw;
+top: 60vh;
 z-index: 10;   
 }
 
 .forside-kontakt {
 background-color: violet;
-width: 180%;
-height: 230%;
+opacity: 80%;
+width: 40vw;
+height: 25vh;
 position: absolute;
-right: 45%;
-top: 700%;
+right: 20vw;
+top: 80vh;
 z-index: 10; 
 }
 
 .forside-omos {
 background-color: pink;
-width: 180%;
-height: 230%;
+opacity: 80%;
+width: 30vw;
+height: 25vh;
 position: absolute;
-right: 350%;
-top: 700%;
+right: -12vw;
+top: 80vh;
 z-index: 10; 
 }
 
@@ -309,25 +372,11 @@ z-index: 10;
     text-align: center;
     font-size: 1.5rem;
     width: 60%;
-    margin-bottom: 155px;
+    margin-bottom: 115px;
 }
 
-.gron .tekst p {
-    padding-top: 5px;
-}
-
-.infographic {
+.infographic img {
     width: 100%;
-}
-
-.streg {
-    height: 50px;
-    flex-direction: row;
-    background-image: url('/img/moenster/streg.webp');
-    background-size: cover;
-    width: 100vw;
-    background-size: auto 100%;
-    margin: 150px 0 100px;
 }
 
 .knapTekst {
@@ -438,16 +487,6 @@ z-index: 10;
     color: var(--blue);
 }
 
-.dobbelt-v {
-    height: 80px;
-    flex-direction: row;
-    background-image: url('/img/moenster/dobbelt-v.webp');
-    background-size: cover;
-    width: 100vw;
-    background-size: auto 100%;
-    margin: 150px 0 100px;
-}
-
 .findos {
     width: 60%;
     font-size: 30px;
@@ -458,16 +497,6 @@ z-index: 10;
 #map {
     width: 100%;
     height: 450px;
-}
-
-.boelge {
-    height: 60px;
-    flex-direction: row;
-    background-image: url('/img/moenster/boelge.webp');
-    background-size: cover;
-    width: 100vw;
-    background-size: auto 100%;
-    margin: 130px 0 100px;
 }
 
 .kalender {
@@ -531,12 +560,15 @@ z-index: 10;
     justify-items: center;
     align-items: center;
     cursor: pointer;
-    height: auto;
+    width: 85vw;
 }
 
 .kalender0 {
     grid-area: 1 / 1 / 6 / 8;
-    width: 100%;
+}
+
+.kalender0 img{
+    width: 85vw;
     margin-top: -3%;
 }
 
@@ -603,12 +635,19 @@ z-index: 10;
     transform: scale(1.2) rotate(350deg);
 }
 
-
-
 .hidden {
     display: none;
 }
-/********************************************** MØNSTERMSKAINE *********************************************/
+
+/********************************************** MØNSTERMASKINE *********************************************/
+
+.h1-laptop {
+    display: block;
+}
+
+.h1-mobil {
+    display: none;
+}
 
 .monster-tekst {
     font-family: "Krub", sans-serif;
@@ -714,16 +753,6 @@ z-index: 10;
     font-size: 3.75rem;
 }
 
-.v {
-    height: 60px;
-    flex-direction: row;
-    background-image: url('/img/moenster/v.webp');
-    background-size: cover;
-    width: 100vw;
-    background-size: auto 100%;
-    margin: 50px 0 80px;
-}
-
 .om-ikoner {
     display: flex;
     justify-content: center;
@@ -757,19 +786,13 @@ z-index: 10;
     width: 80vw;
 }
 
-
-.lene-billede{
-    width: 30%;
-    margin-left: 60%;
-}
-
-.lene{
+.lene, .dorthe{
     font-size: 180%;
     font-weight: 100;
     text-transform: uppercase;
 }
 
-.lene img {
+.lene img, .dorthe img {
     width: 30%;
     margin-left: 60%;
 }
@@ -800,6 +823,14 @@ z-index: 10;
     width: 60%;
 }
 
+.kit {
+    width: 60%;
+}
+
+.kit img {
+    width: 100%;
+}
+
 /*************************************************** TEST **************************************************/
 
 .rod {
@@ -822,8 +853,9 @@ z-index: 10;
     text-align: center;
     font-size: 1.5rem;
     width: 60%;
-    margin-bottom: 155px;
+    margin-bottom: 120px;
     color: var(--brown);
+    height: 135px;
 }
 
 .rod .tekst p {
@@ -839,11 +871,15 @@ z-index: 10;
     z-index: 0;
 }
 
-.moenster-test img {
+.boelgetest-laptop {
     width: 50px;
     margin-right: 25px;
     transform: scaleX(-1);
-    
+    display: block;
+}
+
+.boelgetest-mobil {
+    display: none;
 }
 
 #test {
@@ -918,7 +954,7 @@ input[type="radio"]:checked + .custom-radio {
     border: var(--red) solid 5px;
     color: var(--red);
     border-radius: 25px;
-    padding: 15px 75px;
+    padding: 15px 15px;
     font-size: 28px;
     background-color: var(--redfaded);
     text-transform: uppercase;
@@ -933,7 +969,90 @@ input[type="radio"]:checked + .custom-radio {
     z-index: 3;
 }
 
+/**************************************************** 404 ***************************************************/
 
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+    height: 100vh;
+    margin: 0;
+    width: 100vw;
+    position: fixed;
+}
+        
+.img-404 {
+    width: 40%;
+    z-index: 3;
+    max-width: 530px;
+}
+
+.error p {
+    font-size: 2.5rem;
+    font-family: "Krub", sans-serif;
+    font-weight: 100;
+    width: 65%;
+    text-align: center;
+    z-index: 3;
+
+}
+
+.error a {
+    padding: 15px 15px;
+    z-index: 3;
+}
+
+.boelge-404{
+    height: 60px;
+    background-image: url('/img/moenster/boelge.webp');
+    background-size: cover;
+    width: 300vw;
+    background-size: auto 100%;
+    position: absolute;
+    transform: rotate(40deg);
+    top: 50px;
+    right: -550px;
+}
+
+.dobbelt-v-404 {
+    height: 80px;
+    background-image: url('/img/moenster/dobbelt-v.webp');
+    background-size: cover;
+    width: 200vw;
+    background-size: auto 100%;
+    position: absolute;
+    transform: rotate(340deg);
+    bottom: -100px;
+    right: -300px;
+}
+
+.streg-404 {
+    height: 50px;
+    flex-direction: row;
+    background-image: url('/img/moenster/streg.webp');
+    background-size: cover;
+    width: 200vw;
+    background-size: auto 100%;
+    position: absolute;
+    transform: rotate(245deg);
+    bottom: -100px;
+    left: -575px;
+}
+
+.v-404 {
+    height: 60px;
+    flex-direction: row;
+    background-image: url('/img/moenster/v.webp');
+    background-size: cover;
+    width: 200vw;
+    background-size: auto 100%;
+    position: absolute;
+    transform: rotate(132deg);
+    top: -100px;
+    left: -525px;
+}
 
 /************************************************** FOOTER *************************************************/
 
@@ -993,13 +1112,6 @@ footer h4 {
     opacity: 0.8;
 }
 
-.social img:hover {
-    height: 45px;
-    width: auto;
-    padding-right: 10px;
-    opacity: 1;
-}
-
 .right {
     font-size: 16px;
     text-align: right;
@@ -1011,12 +1123,607 @@ footer h4 {
     width: 25%;
 }
 
-.right a {
+.right a, .kontakt-footer-m a {
     text-decoration: none;
     color: var(--red);
+}
+
+.tider-m, .social-m, .info-m, .kontakt-footer-m {
+    display: none;
 }
 /***********************************************************************************************************/
 /***********************************************************************************************************/
 /************************************************** @MEDIA *************************************************/
 /***********************************************************************************************************/
 /***********************************************************************************************************/
+
+/***********************************************************************************************************/
+/********************************************** Media til tablet *******************************************/
+/***********************************************************************************************************/
+
+@media (max-width: 1040px) {
+    /************************************************** HEADER *************************************************/
+    
+    /************************************************** INDEX **************************************************/
+    
+    /****************************************** BRODERI/HÆKLING/STRIK ********************************************/
+    
+    /************************************************* KONTAKT *************************************************/
+    
+    /********************************************** MØNSTERMSKAINE *********************************************/
+    
+    /************************************************** OM OS **************************************************/
+    
+    /************************************************* RESULTAT ************************************************/
+    
+    /*************************************************** TEST **************************************************/
+
+    /************************************************** FOOTER *************************************************/
+
+
+}
+
+/***********************************************************************************************************/
+/********************************************** Media til mobil ********************************************/
+/***********************************************************************************************************/
+
+@media (max-width: 820px) {
+
+    h1 {
+        font-size: 2.25rem;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+    
+    h2 {
+        font-size: 1.25rem;
+    }
+    
+    main {
+        margin: 25px 0 75px;
+    }
+
+    .boelge {
+        height: 30px;
+        flex-direction: row;
+        background-image: url('/img/moenster/boelge.webp');
+        background-size: cover;
+        width: 100vw;
+        background-size: auto 100%;
+        margin: 40px 0 55px;
+    }
+    
+    .dobbelt-v {
+        height: 35px;
+        flex-direction: row;
+        background-image: url('/img/moenster/dobbelt-v.webp');
+        background-size: cover;
+        width: 100vw;
+        background-size: auto 100%;
+        margin: 50px 0 65px;
+    }
+    
+    .streg {
+        height: 25px;
+        flex-direction: row;
+        background-image: url('/img/moenster/streg.webp');
+        background-size: cover;
+        width: 100vw;
+        background-size: auto 100%;
+        margin: 50px 0 50px;
+    }
+    
+    .v {
+        height: 30px;
+        flex-direction: row;
+        background-image: url('/img/moenster/v.webp');
+        background-size: cover;
+        width: 100vw;
+        background-size: auto 100%;
+        margin: 50px 0 80px;
+    }
+
+    /************************************************** HEADER *************************************************/
+    header {
+        height: 110px;
+        padding: 0 20px;
+    }
+    
+    .logo {
+        height: 80%;
+        margin-top: 20px;
+    }
+
+    .logo img {
+        height: 75px;
+    }
+    
+    #burger-menu {
+        top: 40px;
+        right: 25px;
+        height: 30px;
+        width: 45px;
+    
+        /* THE LINES */
+        span, span:before, span:after {
+            height: 7px;
+            width: 43px;
+        }
+    }
+    
+    #menu {
+        font-size: 1.25rem;
+        width: 100%;
+        padding: 17vh 0 5vh;
+        height: 100vh;
+    }
+
+    .logo-menu {
+        width: 120px;
+        margin-top: 25px;
+    }
+
+    /************************************************** INDEX **************************************************/
+
+    /****************************************** BRODERI/HÆKLING/STRIK ******************************************/
+    
+    .gron .tekst {
+        font-size: 1rem;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    
+    .knapTekst {
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .monsterKnap, .testKnap {
+        width: 80%;
+    }
+    
+    .monsterKnap p {
+        font-size: 1rem;
+        width: 80%;
+        margin-bottom: 20px;
+        height: 60px;
+    }
+
+    .testKnap p {
+        font-size: 1rem;
+        width: 80%;
+        margin-bottom: 20px;
+        height: 40px;
+    }
+    
+    .monsterKnap a {
+        border: var(--green) solid 2px;
+        width: 150px;
+        height: 45px;
+    }
+    
+    .testKnap a {
+        border: var(--green) solid 2px;
+        width: 150px;
+        height: 45px;
+        line-height: 32px;
+    }
+
+    /************************************************* KONTAKT *************************************************/
+    
+    
+    .kontakt-formular {
+        gap: 0;
+        width: 80%;
+    }
+    
+    .navn {
+        gap: 0 50px;
+        width: 100%;
+    }
+    
+    .fornavn, .efternavn, .besked {
+        width: 100%;
+        font-size: 30px;
+    }
+    
+    .fornavn label, .efternavn label, .besked label {
+        font-size: 1rem;
+    }
+    
+    #fornavn, #efternavn, #besked {
+        border: var(--blue) 2px solid;
+        padding: 0;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+    
+    #indsend {
+        margin-top: 15px;
+        border: var(--blue) 2px solid;
+    }
+    
+    .findos {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    #map {
+        height: 300px;
+    }
+    
+    .kalender {
+        width: 90vw;
+    }
+    
+    .kalender h1 {
+        font-size: 1.5rem;
+        margin: 0 0 10px;
+    }
+    
+    .kalender .tekst {
+        font-size: 0.8rem;
+        width: 85%;
+        margin: 0 0 30px;
+    }
+    
+    .kalender h3 {
+        font-size: 1.15rem;
+        margin-bottom: 35px;
+    }
+    
+    .kalenderpunkt {
+        font-size: 0.6rem;
+        width: 75%;
+        padding-top: 5px;
+    }
+    
+    .kalenderpunkt p {
+        font-size: 0.5rem;
+    }
+    
+    .kalender h4 {
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+    
+    .kalenderpunkter {
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        width: 95vw;
+        height: auto;
+    }
+    
+    .kalender0 {
+        grid-area: 1 / 1 / 6 / 8;
+        margin-top: -3%;
+    }
+    
+    .kalender0 img{
+        width: 95vw;
+        height: auto;
+        margin-top: -3%;
+    }
+    
+    .kalender1 {
+        transform: rotate(320deg);
+        margin-left: -20px;
+    }
+    
+    .kalender1:hover {
+        transform: scale(1.2) rotate(320deg);
+    }
+    
+    .kalender2 {
+        margin-left: -10px;
+    }
+    
+    .kalender3 {
+        margin-left: -15%;
+    }
+    
+    .kalender5 {
+        margin-top: -10px;
+    }
+    
+    .kalender6 {
+        margin-top: -20px;
+    }
+        
+    .hidden {
+        display: none;
+    }
+
+    /********************************************** MØNSTERMSKAINE *********************************************/
+
+    .h1-laptop {
+        display: none;
+    }
+    
+    .h1-mobil {
+        display: block;
+        line-height: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .monster-tekst {
+        font-size: 1rem;
+        width: 70%;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    
+    #monster-button {
+        padding: 7px 13px;
+        width: 140px;
+    }
+    
+    #controls {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .monster-tekst1 {
+        font-size: 1rem;
+        width: 70%;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    
+    #color-buttons {
+        width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #color-buttons button {
+        width: 30px;
+        height: 30px;
+        border: none;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    
+    #pattern-container {
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+    }
+    
+    .square {
+        width: 30px;
+        height: 30px;
+        border: var(--green) 1px solid;
+        box-sizing: border-box;
+    }
+    
+    #clear-button {
+        font-size: 1rem;
+        margin: 10px 0 50px;
+    }
+    
+    #export-output {
+        display: none;
+    }
+
+    /************************************************** OM OS **************************************************/
+    
+    /************************************************* RESULTAT ************************************************/
+    
+    .rod .p {
+        font-size: 1rem;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    
+    .cirkel {
+        height: 20rem;
+        width: 20rem;
+        margin-bottom: 50px;
+    }
+    
+    .cirkel img {
+        width: 60%;
+    }
+    
+    .kit {
+        width: 85%;
+    }
+
+    /*************************************************** TEST **************************************************/
+
+    .rod h2 {
+        margin-bottom: 5px;
+        width: 70%;
+        text-wrap: wrap;
+    }
+
+    .rod .tekst {
+        font-size: 1rem;
+        width: 70%;
+        margin-bottom: 15px;
+        color: var(--brown);
+        height: 110px;
+    }
+
+    .moenster-test {
+        position: absolute;
+        top: 350px;
+        left: 15%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .boelgetest-laptop {
+        display: none;
+    }
+    
+    .boelgetest-mobil {
+        display: block;
+        width: 30px;
+        transform: scaleX(-1);
+    }
+
+    #test {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 102.5px;
+        z-index: 1;
+        margin: 65px 0 15px;
+        width: 40vw;
+    }
+
+    .question, .omvendt {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        height: 80px;
+        font-size: 0.8rem;
+        margin-left: 30px;
+    }
+
+    .question li, .omvendt li {
+        width: 250px;
+        margin-left: 5px;
+    }
+
+    .question p, .omvendt p {
+        width: 250px;
+        text-align: left;
+    }
+
+    .custom-radio {
+        width: 10px;
+        height: 10px;
+    }
+
+    .se-resultat {
+        margin-top: 10px;
+        z-index: 3;
+    }
+
+    .button {
+        border: var(--red) solid 2px;
+        padding: 5px 20px;
+        font-size: 12px;
+        width: 130px;
+    }
+
+    /**************************************************** 404 ***************************************************/
+            
+    .img-404 {
+        width: 80%;
+    }
+
+    .error p {
+        font-size: 1.5rem;
+        width: 80%;
+    }
+
+    .error a {
+        width: 150px;
+    }
+
+    .boelge-404{
+        height: 30px;
+        transform: rotate(60deg);
+        top: 50px;
+        right: -390px;
+    }
+
+    .dobbelt-v-404 {
+        height: 35px;
+        transform: rotate(350deg);
+        bottom: 30px;
+        right: -130px;
+    }
+
+    .streg-404 {
+        height: 25px;
+        transform: rotate(245deg);
+        bottom: 300px;
+        left: -400px;
+    }
+
+    .v-404 {
+        height: 30px;
+        transform: rotate(132deg);
+        top: -10px;
+        left: -355px;
+    }
+
+    /************************************************** FOOTER *************************************************/
+    footer {
+        height: 345px;
+        padding: 20px 30px 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        font-size: 14px;
+    }
+
+    footer p, address {
+        margin: 3px 0;
+    }
+
+    .tider-m, .social-m, .info-m, .kontakt-footer-m {
+        display: block;
+    }
+        
+    .kontakt-footer-m {
+        grid-area: 1 / 1 / 2 / 4;
+        text-align: center;
+    }
+        
+    .social-m { 
+        grid-area: 2 / 2 / 3 / 3;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .social-m p {
+        padding: 4px 0;
+    }
+    
+    .social-m img {
+        height: 25px;
+        width: auto;
+        padding: 0 5px;
+        opacity: 0.8;
+    }
+        
+    .tider-m { 
+        grid-area: 3 / 1 / 4 / 2;
+        height: 125px;
+    }
+
+    .info-m { 
+        grid-area: 3 / 3 / 4 / 4; 
+        text-align: right;
+        height: 125px;
+    }
+
+    footer img {
+        grid-area: 3 / 1 / 5 / 4;
+        width: 100px;
+        justify-self: center;
+        align-self: end;
+    }
+
+    footer h4 {
+        font-size: 14px;
+    }
+
+    .left, .right {
+        display: none;
+    }
+}

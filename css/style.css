@@ -750,6 +750,14 @@ z-index: 10;
     font-size: 3.75rem;
 }
 
+.velkommen-laptop{
+    display: block;
+}
+
+.velkommen-mobil{
+    display: none;
+}
+
 .om-ikoner {
     display: flex;
     justify-content: center;
@@ -765,16 +773,17 @@ z-index: 10;
     font-family: "Kite One", sans serif;
     color: var(--brown);
     text-align: center;
+    font-size: 1rem;
 }
 
 .om-ikoner img {
     width: 55%;
-    align-self: center;
     margin: 30px;
+    align-self: center;
 }
 
 
-.om-citat{
+.om-citat {
     color: var(--red);
     margin-top: 75px;
     font-size: 30px;
@@ -783,16 +792,50 @@ z-index: 10;
     width: 80vw;
 }
 
-.lene, .dorthe{
-    font-size: 180%;
+.lene, .dorthe {
     font-weight: 100;
-    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 70vw;
+    justify-content: space-between;
 }
 
 .lene img, .dorthe img {
-    width: 30%;
-    margin-left: 60%;
+    width: 45%;
+  
+   
 }
+
+.lene-h3, .dorthe-h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+  
+}
+
+.lene-1, .dorthe-1 {
+    color: var(--brown);
+    font-family: "Krub", sans-serif;
+    padding-bottom: 10px;
+    font-size: 1rem;
+}
+
+.lene-tekst, .dorthe-tekst{
+    width: 50%;
+}
+
+q{
+    color: var(--red);
+    text-align: center;
+    font-size: 1rem;
+    display: block;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  
+}
+
 
 /************************************************* RESULTAT ************************************************/
 .rod .p {
@@ -1508,6 +1551,66 @@ footer h4 {
 
     /************************************************** OM OS **************************************************/
     
+    .velkommen-laptop{
+        display: none;
+    }
+    
+    .velkommen-mobil{
+        display: block;
+    }
+
+    .om-moenster {
+        display: none;
+    }
+    
+    .sammen{
+        margin-top: 10%;
+        width: 100vw;
+    }
+
+    .velkommen{
+        font-size: 3rem;
+        margin-top: 40px;
+    }
+
+    .om-ikoner {
+        width: 90vw;
+    }
+
+    .ikoner {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        font-size: 0.75rem;
+    }
+
+    .om-ikoner img {
+        width: 40%;
+    }
+
+    .om-citat {
+        font-size: 1rem;
+    }
+
+    .lene, .dorthe {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .lene img, .dorthe img {
+        width: 100%;
+    }
+
+    .lene-h3, .dorthe-h3 {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .lene-tekst, .dorthe-tekst{
+        width: 90%;
+    }
+
+
     /************************************************* RESULTAT ************************************************/
     
     .rod .p {

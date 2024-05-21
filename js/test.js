@@ -28,10 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = '/resultat-strik.html';
         } else if (answers.question1 === 'B' /*&& answers.question2 === 'A' && answers.question3 === 'A' && answers.question4 === 'A' && answers.question5 === 'A'*/) {
             window.location.href = '/resultat-haekling.html';
-        } else if (answers.question1 === 'C' /*&& answers.question2 === 'A' && answers.question3 === 'A' && answers.question4 === 'A' && answers.question5 === 'A'*/) {
+        } else (answers.question1 === 'C' /*&& answers.question2 === 'A' && answers.question3 === 'A' && answers.question4 === 'A' && answers.question5 === 'A'*/) {
             window.location.href = '/resultat-broderi.html';
-        } else {
-            window.location.href = '';
         }
     }
 

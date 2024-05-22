@@ -60,36 +60,37 @@
         <!-- main start -->
         <main class="bla">
             <h1>Kontakt</h1>
-            <!-- kontakt formular -->
-            <form action="kontakt.php" class="kontakt-formular">
+            <div class="top">
+                <!-- kontakt formular -->
+                <form action="kontakt.php" class="kontakt-formular">
 
-                <div class="navn">
-                    <div class="fornavn">
-                        <label for="fornavn">Fornavn*</label>
-                        <input type="text" id="fornavn" name="firstname" required>
+                    <div class="navn">
+                        <div class="fornavn">
+                            <label for="fornavn">Fornavn*</label>
+                            <input type="text" id="fornavn" name="firstname" required>
+                        </div>
+
+                        <div class="efternavn">
+                            <label for="efternavn">Efternavn*</label>
+                            <input type="text" id="efternavn" name="lastname" required>
+                        </div>
                     </div>
 
-                    <div class="efternavn">
-                        <label for="efternavn">Efternavn*</label>
-                        <input type="text" id="efternavn" name="lastname" required>
+                    <div class="besked">
+                        <label for="besked">Besked*</label>
+                        <textarea id="besked" name="besked" required></textarea>
                     </div>
+                    <button class="button" id="indsend" type="submit" value="Submit">Indsend</button>
+                
+                </form>
+
+                <div class="dobbelt-v"></div>
+
+                <!-- kort -->
+                <div class="findos">
+                    <h3>Find os</h3>
+                    <div id="map"></div>
                 </div>
-
-                <div class="besked">
-                    <label for="besked">Besked*</label>
-                    <textarea id="besked" name="besked" required></textarea>
-                </div>
-                <button class="button" id="indsend" type="submit" value="Submit">Indsend</button>
-            
-            </form>
-
-            <!-- mønster -->
-            <div class="dobbelt-v"></div>
-
-            <!-- kort -->
-            <div class="findos">
-                <h3>Find os</h3>
-                <div id="map"></div>
             </div>
 
             <!-- mønster -->
@@ -97,7 +98,7 @@
 
             <!-- kalender -->
             <section class="kalender">
-                <h1>Kalender</h1>
+                <h2>Kalender</h2>
                 <p class="tekst">I løbet af måneden afholder vi også workshops i butikken, hvor du kan udfordre dig selv på nye teknikker eller blive beriget med ny inspiration.</p>
                 <h3>Maj 2024</h3>
 
@@ -161,8 +162,8 @@
                 </section>
                 <div class="social">
                     <p>Sociale medier</p>
-                    <a href="https://www.facebook.com/broderimoderne/?locale=da_DK" target=”_blank”><img src="img/ikoner/facebook.webp" alt=""></a>
-                    <a href="https://www.instagram.com/broderimoderne/?hl=da" target=”_blank”><img src="img/ikoner/instagram.webp" alt=""></a>
+                    <a href="https://www.facebook.com/broderimoderne/?locale=da_DK" target=”_blank”><img src="img/ikoner/facebook.webp" alt="Facebook logo"> </a>
+                    <a href="https://www.instagram.com/broderimoderne/?hl=da" target=”_blank”><img src="img/ikoner/instagram.webp" alt="Instagram logo"> </a>
                 </div>
             </div>
 
@@ -186,8 +187,8 @@
             </section>
             <div class="social-m">
                 <p>Sociale medier</p>
-                <a href="https://www.facebook.com/broderimoderne/?locale=da_DK" target=”_blank”><img src="img/ikoner/facebook.webp" alt=""></a>
-                <a href="https://www.instagram.com/broderimoderne/?hl=da" target=”_blank”><img src="img/ikoner/instagram.webp" alt=""></a>
+                <a href="https://www.facebook.com/broderimoderne/?locale=da_DK" target=”_blank”><img src="img/ikoner/facebook.webp" alt="Facebook logo"> </a>
+                <a href="https://www.instagram.com/broderimoderne/?hl=da" target=”_blank”><img src="img/ikoner/instagram.webp" alt="Instagram logo"> </a>
             </div>
 
             <section class="info-m">

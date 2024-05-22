@@ -154,63 +154,73 @@ header {
     cursor: pointer;
     height: 35px;
     width: 45px;
+}
 
-	/* THE LINES */
-	span, span:before, span:after {
-		height: 8px;
-        width: 50px;
-        border-radius: 25px;
-		opacity: 1;
-		transition: 0.3s ease-in-out;
-        position: absolute;
-	}
+/* THE LINES */
+span {
+	height: 8px;
+    width: 50px;
+    border-radius: 25px;
+	opacity: 1;
+	transition: 0.3s ease-in-out;
+    position: absolute;
+}
 
-    span:before,
-	span:after {
-		content: '';
-	}
+span:before, span:after {
+	height: 8px;
+    width: 50px;
+    border-radius: 25px;
+	opacity: 1;
+	transition: 0.3s ease-in-out;
+    position: absolute;
+}
 
+span:before,
+span:after {
+	content: '';
+}
+
+/* // TOP */
+span:before {
+	top: -15px;
+    background: var(--green);
+}
+
+/* // MIDDLE */
+span {
+	top: 13px;
+    background: var(--blue);
+}
+
+/* // BOTTOM */
+span:after {
+	top: 15px;
+    background: var(--red);
+}
+
+/* // ROTATION ON CLICK */
+&.close {
 	/* // TOP */
 	span:before {
-		top: -15px;
-        background: var(--green);
+		top: 0px;
+		transform: rotate(90deg);
+        width: 50px;
 	}
 
 	/* // MIDDLE */
 	span {
-		top: 13px;
-        background: var(--blue);
+		transform: rotate(-45deg);
+        width: 50px;
 	}
 
 	/* // BOTTOM */
 	span:after {
-		top: 15px;
-        background: var(--red);
-	}
-
-	/* // ROTATION ON CLICK */
-	&.close {
-		/* // TOP */
-		span:before {
-			top: 0px;
-			transform: rotate(90deg);
-            width: 50px;
-		}
-
-		/* // MIDDLE */
-		span {
-			transform: rotate(-45deg);
-            width: 50px;
-		}
-
-		/* // BOTTOM */
-		span:after {
-			top: 0px;
-			transform: rotate(90deg);
-			opacity: 0;
-		}
+		top: 0px;
+		transform: rotate(90deg);
+		opacity: 0;
 	}
 }
+
 
 #menu {
     background-color: var(--beige);
@@ -245,27 +255,17 @@ header {
 
 
 /************************************************** INDEX **************************************************/
-
-.forside-body{
-    font-family: "futura";
-    background-color: var(--background);
-    color: var(--brown);
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
 .forside-main {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    margin: 0;
 }
 
 .forside-billede {
-    height: auto;
-    width: 100vw;
-    display: block;
+    height: 100vh;
     position: absolute;
     top: 0;
     right: 0;
@@ -275,75 +275,51 @@ header {
     width: 100%;
 }
 
-
-/*laptop skilter*/
-.forside-skilter {
-width: 100px;
-height: 100px;
-position: absolute;
-z-index: 10;
-}
-
-
-
 .forside-strik{
-background-color: red;
-opacity: 80%;
-width: 60vw;
-height: 27vh;
-position: absolute;
-right: -2vw;
-z-index: 10;
+    width: 15vw;
+    height: 25vh;
+    position: absolute;
+    top: 0;
+    right: 50vw;
+    z-index: 10;
 }
 
 
 .forside-haekling {
-background-color: green;
-opacity: 80%;
-width: 50vw;
-height: 31vh;
-position: absolute;
-right: 20vh;
-top: 28vh;
-z-index: 10;
+    width: 30vw;
+    height: 30vh;
+    position: absolute;
+    left: 20vh;
+    top: 25vh;
+    z-index: 10;
 }
 
 .forside-broderi {
-background-color: blue;
-opacity: 80%;
-width: 100vw;
-height: 20vh;
-position: absolute;
-right: -10vw;
-top: 60vh;
-z-index: 10;   
+    width: 30vw;
+    height: 30vh;
+    position: absolute;
+    right: 30vw;
+    top: 40vh;
+    z-index: 10;   
 }
 
 .forside-kontakt {
-    background-color: pink;
-    opacity: 80%;
     width: 30vw;
     height: 25vh;
     position: absolute;
-    right: -12vw;
-    top: 80vh;
+    right: 35vw;
+    top: 70vh;
     z-index: 10; 
 }
 
 .forside-omos {
-    background-color: violet;
-    opacity: 80%;
-    width: 40vw;
+    width: 30vw;
     height: 25vh;
     position: absolute;
-    right: 20vw;
-    top: 80vh;
+    right: 65vw;
+    top: 70vh;
     z-index: 10;  
 }
-
-
-
-
 
 /****************************************** BRODERI/HÆKLING/STRIK ********************************************/
 .gron {
@@ -403,21 +379,21 @@ z-index: 10;
     border: var(--green) solid 5px;
     color: var(--green);
     background-color: var(--greenfaded);
-    width: 350px;
-    height: 95px;
+    width: 330px;
+    height: 90px;
     text-align: center;
-    padding: 5px;
+    padding: 7px;
 }
 
 .testKnap a {
     border: var(--green) solid 5px;
     color: var(--green);
     background-color: var(--greenfaded);
-    width: 350px;
-    height: 95px;
+    width: 330px;
+    height: 90px;
     text-align: center;
     padding: 5px;
-    line-height: 80px;
+    line-height: 70px;
 }
 
 /************************************************* KONTAKT *************************************************/
@@ -431,6 +407,17 @@ z-index: 10;
     color: var(--blue);
 }
 
+.top {
+    display: flex;
+    flex-direction: row;
+    gap: 0 10%;
+    width: 75vw;
+}
+
+.top .dobbelt-v {
+    display: none;
+}
+
 .kontakt-formular {
     display: flex;
     flex-direction: column;
@@ -438,14 +425,14 @@ z-index: 10;
     align-items: center;
     height: auto;
     gap: 25px 0;
-    width: 60%;
+    width: 45%;
 }
 
 .navn {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 0 50px;
+    gap: 15px;
     width: 100%;
 }
 
@@ -461,7 +448,7 @@ z-index: 10;
 }
 
 .fornavn label, .efternavn label, .besked label {
-    font-size: 30px;
+    font-size: 1.25rem;
     font-weight: 20;
     font-family: "futura";
 }
@@ -470,30 +457,36 @@ z-index: 10;
     background-color: var(--bluefaded);
     border: var(--blue) 5px solid;
     border-radius: 25px;
-    font-size: 30px;
-    padding: 20px;
+    font-size: 1.25rem;
+    padding: 10px;
     margin-bottom: 15px;
     width: 100%;
+}
 
+#besked {
+    height: 150px;
 }
 
 #indsend {
-    margin-top: 25px;
+    margin-top: 20px;
     border: var(--blue) 5px solid;
     background-color: var(--bluefaded);
     color: var(--blue);
 }
 
 .findos {
-    width: 60%;
-    font-size: 30px;
+    width: 45%;
+}
+
+.findos h3 {
+    font-size: 1.5rem;
     font-weight: 100;
     text-transform: uppercase;
 }
 
 #map {
     width: 100%;
-    height: 450px;
+    height: 92%;
 }
 
 .kalender {
@@ -506,8 +499,9 @@ z-index: 10;
     align-items: center;
 }
 
-.kalender h1 {
+.kalender h2 {
     margin-bottom: 10px;
+    font-size: 3rem;
 }
 
 .kalender .tekst {
@@ -821,11 +815,11 @@ z-index: 10;
     font-size: 1rem;
 }
 
-.lene-tekst, .dorthe-tekst{
+.lene-tekst, .dorthe-tekst {
     width: 50%;
 }
 
-q{
+q {
     color: var(--red);
     text-align: center;
     font-size: 1rem;
@@ -833,7 +827,6 @@ q{
     padding-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
-  
 }
 
 
@@ -863,8 +856,40 @@ q{
     width: 60%;
 }
 
+.kit-pakke {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+}
+
 .kit {
-    width: 60%;
+    width: 40%;
+}
+
+.kit-pakke h2 {
+    font-size: 3rem;
+    padding-bottom: 50px;
+    width: 120%;
+}
+
+.kit-indhold {
+    font-family: "Krub", sans-serif;
+    font-weight: 100;
+    font-size: 1.75rem;
+    margin-bottom: 120px;
+    color: var(--brown);
+}
+
+.kit-indhold div {
+    padding: 15px 0;
+}
+
+.kit-billede {
+    width: 45%;
+}
+
+.kit-billede img {
+    width: 100%;
 }
 
 /*************************************************** TEST **************************************************/
@@ -990,12 +1015,12 @@ input[type="radio"]:checked + .custom-radio {
     border: var(--red) solid 5px;
     color: var(--red);
     border-radius: 25px;
-    padding: 15px 15px;
-    font-size: 28px;
+    padding: 10px 15px;
+    font-size: 1.5rem;
     background-color: var(--redfaded);
     text-transform: uppercase;
     cursor: pointer;
-    width: 350px;
+    width: 275px;
     font-family: "futura";
     text-align: center;
 }
@@ -1105,6 +1130,7 @@ footer {
     height: 245px;
     padding: 40px 80px;
     z-index: 2;
+    font-size: 1rem;
 }
 
 footer img {
@@ -1128,7 +1154,7 @@ address {
 footer h4 {
     font-size: 16px;
     font-weight: 800;
-    padding-bottom: -4px;
+    margin-bottom: -4px;
 }
 
 .social p {
@@ -1181,7 +1207,50 @@ footer h4 {
     /************************************************** HEADER *************************************************/
     
     /************************************************** INDEX **************************************************/
+    
+    .forside-billede {
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .forside-strik {
+        width: 100vw;
+        height: 30vh;
+        top: 0;
+        right: 0;
+    }
+    
+    .forside-haekling {
+        width: 100vw;
+        height: 15vh;
+        left: 0;
+        top: 35vh;
+    }
+    
 
+    .forside-broderi {
+        width: 100vw;
+        height: 15vh;
+        right: 0;
+        top: 50vh;
+        }
+    
+
+    .forside-kontakt {
+        width: 25vw;
+        height: 20vh;
+        right: 40vw;
+        top: 65vh;
+        }
+        
+    .forside-omos {
+        width: 25vw;
+        height: 20vh;
+        right: 65vw;
+        top: 65vh;
+        }
     /****************************************** BRODERI/HÆKLING/STRIK ********************************************/
     
     /************************************************* KONTAKT *************************************************/
@@ -1279,13 +1348,19 @@ footer h4 {
         right: 25px;
         height: 30px;
         width: 45px;
+    }
     
         /* THE LINES */
-        span, span:before, span:after {
-            height: 7px;
-            width: 43px;
-        }
+    span {
+        height: 7px;
+        width: 43px;
     }
+
+    span:before, span:after {
+        height: 7px;
+        width: 43px;
+    }
+    
     
     #menu {
         font-size: 1.25rem;
@@ -1300,91 +1375,50 @@ footer h4 {
     }
 
     /************************************************** INDEX **************************************************/
-
-
     .forside-billede {
-        width: 100%;
-        height: auto;
-        display: block;
+        height: 100vh;
         position: absolute;
         top: 0;
         right: 0;
     }
     
-    .forside-billede img {
-        width: 100%;
+    .forside-strik {
+        width: 100vw;
+        height: 15vh;
+        top: 25vh;
+        right: 0;
     }
+    
+    .forside-haekling {
+        width: 100vw;
+        height: 12vh;
+        left: 0;
+        top: 55vh;
+    }
+    
 
-    .forside-skilter{
-        display: none;
-    }
+    .forside-broderi {
+        width: 100vw;
+        height: 15vh;
+        right: 0;
+        top: 68vh;
+        }
+    
 
-    /*mobil skilter*/
+    .forside-kontakt {
+        width: 50vw;
+        height: 15vh;
+        right: 0vw;
+        top: 85vh;
+        }
+        
+    .forside-omos {
+        width: 50vw;
+        height: 15vh;
+        right: 50vw;
+        top: 85vh;
+        }
 
-.forside-skilter-mobil {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    z-index: 10;
-    }
-    
-    
-    
-    .forside-strik-mobil {
-    background-color: red;
-    opacity: 80%;
-    width: 45vw;
-    height: 10vh;
-    position: absolute;
-    top: 30vh;
-    left: 2vw;
-    z-index: 10;
-    }
-    
-    
-    .forside-haekling-mobil {
-    background-color: green;
-    opacity: 80%;
-    width: 50vw;
-    height: 10vh;
-    position: absolute;
-    right: 10vh;
-    top: 60vh;
-    z-index: 10;
-    }
-    
-    .forside-broderi-mobil {
-    background-color: blue;
-    opacity: 80%;
-    width: 50vw;
-    height: 10vh;
-    position: absolute;
-    left: 12vw;
-    top: 73vh;
-    z-index: 10;   
-    }
-    
-    .forside-kontakt-mobil {
-    background-color: violet;
-    opacity: 80%;
-    width: 40vw;
-    height: 10vh;
-    position: absolute;
-    left: 12vw;
-    top: 89vh;
-    z-index: 10; 
-    }
-    
-    .forside-omos-mobil {
-    background-color: pink;
-    opacity: 80%;
-    width: 40vw;
-    height: 10vh;
-    position: absolute;
-    right: 25vw;
-    top: 89vh;
-    z-index: 10;  
-    }
 
     /****************************************** BRODERI/HÆKLING/STRIK ******************************************/
     
@@ -1421,19 +1455,29 @@ footer h4 {
     .monsterKnap a {
         border: var(--green) solid 2px;
         width: 150px;
-        height: 45px;
+        height: 50px;
     }
     
     .testKnap a {
         border: var(--green) solid 2px;
         width: 150px;
-        height: 45px;
-        line-height: 32px;
+        height: 50px;
+        line-height: 35px;
     }
 
     /************************************************* KONTAKT *************************************************/
-    
-    
+    .top {
+        display: flex;
+        flex-direction: column;
+        gap: 0 10%;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .top .dobbelt-v {
+        display: block;
+    }
+
     .kontakt-formular {
         gap: 0;
         width: 80%;
@@ -1471,7 +1515,8 @@ footer h4 {
     }
 
     #map {
-        height: 300px;
+        height: 500px;
+        width: 100%;
     }
     
     .kalender {
@@ -1694,6 +1739,12 @@ footer h4 {
 
     /************************************************* RESULTAT ************************************************/
     
+    .rod h2 {
+        margin-bottom: 5px;
+        width: 70%;
+        text-wrap: wrap;
+    }
+
     .rod .p {
         font-size: 1rem;
         width: 80%;
@@ -1710,17 +1761,45 @@ footer h4 {
         width: 60%;
     }
     
-    .kit {
-        width: 85%;
+    .kit-pakke {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 90vw;
     }
+    
+    .kit {
+        width: 90%;
+    }
+    
+    .kit-pakke h2 {
+        font-size: 2rem;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    
+    .kit-indhold {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+        color: var(--brown);
+    }
+    
+    .kit-indhold div {
+        padding: 15px 0;
+    }
+    
+    .kit-billede {
+        width: 90%;
+    }
+    
+    .kit-billede img {
+        width: 100%;
+    }
+    
 
     /*************************************************** TEST **************************************************/
 
-    .rod h2 {
-        margin-bottom: 5px;
-        width: 70%;
-        text-wrap: wrap;
-    }
+    
 
     .rod .tekst {
         font-size: 1rem;
@@ -1795,6 +1874,7 @@ footer h4 {
         padding: 5px 20px;
         font-size: 12px;
         width: 130px;
+        margin-top: 5px;
     }
 
     /**************************************************** 404 ***************************************************/
